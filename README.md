@@ -1,2 +1,1 @@
-# Python_Geeks_for_Geeks_Exercises
-Geeks for Geeks Python Exercises - Recommended by Harman
+This repository is a working exercise repository for GeeksForGeeks.com Python examples.
