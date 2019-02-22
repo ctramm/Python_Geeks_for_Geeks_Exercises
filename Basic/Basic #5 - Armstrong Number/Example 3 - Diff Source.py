@@ -6,11 +6,13 @@ num = int(input("Enter a number:"))
 # initialize sum
 sum = 0
 
+length = len(str(num))
+
 # find the sum of the cube of each digit
 temp = num
 while temp > 0:
     digit = temp % 10
-    sum += digit ** 3
+    sum += digit ** length
     temp //= 10
 
 # display the result
