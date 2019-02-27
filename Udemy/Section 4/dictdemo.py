@@ -7,15 +7,12 @@ Not sequenced, no indexing -> Mapping
 car = {'make': 'bmw', 'model': '550i', 'year': 2016}
 print(car)
 
-d = {}
-
 model = car['model']
 
 print(car['make'])
 print(model)
 
-d['one'] = 1
-d['two'] = 2
+d = {'one': 1, 'two': 2}
 
 print(d)
 
