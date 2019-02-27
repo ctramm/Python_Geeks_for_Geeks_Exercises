@@ -3,14 +3,14 @@ table
 object reference count
 """
 
-a = "nyc"
+b = "nyc"
 b = "nyc"
 
-print(a)
+print(b)
 
-a = 123
+b = 123
 
-print(a)
+print(b)
 print(b)
 
 b = 456

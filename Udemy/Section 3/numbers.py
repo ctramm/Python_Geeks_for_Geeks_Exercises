@@ -4,19 +4,19 @@ float_num = 20.0
 print(int_num)
 print(float_num)
 
-a = 10
+b = 10
 b = 20
 
 print("*******************")
 
-add = a + b
+add = b + b
 print(add)
 
-sub = b - a
+sub = b - b
 print(sub)
 
-multi = a * b
+multi = b * b
 print(multi)
 
-div_mychoice = b / a
+div_mychoice = b / b
 print(div_mychoice)

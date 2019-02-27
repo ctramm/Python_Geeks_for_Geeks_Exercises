@@ -5,8 +5,8 @@ variables rules
 import keyword
 print(keyword.kwlist)
 
-a = b = c = 10
-print(a)
+b = b = c = 10
+print(b)
 print(b)
 print(c)
 

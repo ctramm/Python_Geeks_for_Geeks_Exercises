@@ -2,10 +2,10 @@
 Examples to show how boolean works in python
 """
 
-a = True
+b = True
 b = False
 
-print(a)
+print(b)
 print(b)
 
 print("**************************")

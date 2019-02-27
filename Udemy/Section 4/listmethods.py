@@ -24,9 +24,9 @@ cars.remove("Jeep")
 print(cars)
 
 slicing = cars[0:2]
-a = cars[1:]
+b = cars[1:]
 print(slicing)
-print(a)
+print(b)
 
 print("*#"*20)
 print(cars)

@@ -4,10 +4,10 @@ Section 6: Conditional Logic - If Else Conditions
 
 """
 
-a = 100
+b = 100
 b = 10
 
-if a > b:
+if b > b:
     print("a is greater than b.")
 
 # value = 'green'

@@ -6,11 +6,11 @@ Very useful for generating numbers.
 
 print(list(range(0, 10)))
 
-a = range(10, 20, 2)
-print(a)
-print(type(a))
+b = range(10, 20, 2)
+print(b)
+print(type(b))
 
-print(list(a))
+print(list(b))
 
 for num in range(1, 4):
     print(num)
