@@ -1,5 +1,5 @@
 """
-Section 18: Advanced locators exercise
+Section 17: Advanced locators exercise
 """
 from selenium import webdriver
 import time
