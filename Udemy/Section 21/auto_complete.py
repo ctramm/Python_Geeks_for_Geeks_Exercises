@@ -12,17 +12,20 @@ class AutoComplete:
         driver = webdriver.Chrome()
         driver.maximize_window()
         driver.get(base_url)
-        driver.implicitly_wait(5)
+        driver.implicitly_wait(10)
+
+        time.sleep(10)
 
         # Send Partial Data
         city_field = driver.find_element_by_id("LandingPageAirSearchForm_originationAirportCode")
         city_field.send_keys("New York")
-        time.sleep(3)
 
-        # # Find the item and click
-        # item_to_select = driver.find_element_by_xpath(
-        #     "//ul[@id='air-city-departure-menu']//li[contains(text(),'NJ - EWR')]")
-        # item_to_select.click()
+        time.sleep(10)
+
+        # Find the item and click
+        desc = driver.find_element_by_id("LandingPageAirSearchForm_originationAirportCode--menu")
+        item_to_click = desc.find_element_by_id("LandingPageAirSearchForm_originationAirportCode--item-2")
+        item_to_click.click()
 
         time.sleep(3)
         driver.quit()
