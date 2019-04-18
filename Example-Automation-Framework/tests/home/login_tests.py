@@ -1,34 +1,28 @@
-from selenium import webdriver
+from pages.home.login_page import LoginPage
+from utilities.status import Status
+import unittest
+import pytest
 
 
-class LoginTests:
+@pytest.mark.usefixtures("one_time_setup", "set_up")
+class LoginTests(unittest.TestCase):
 
+    @pytest.fixture(autouse=True)
+    def class_setup(self, one_time_setup):
+        self.lp = LoginPage(self.driver)
+        self.ts = Status(self.driver)
+
+    @pytest.mark.run(order=1)
+    def test_invalid_login(self):
+        self.lp.logout()
+        self.lp.login("bad@email.com", "badPassword")
+        result = self.lp.verify_login_failure()
+        self.ts.mark_final("test_invalid_login", result, "Invalid Login passed")
+
+    @pytest.mark.run(order=2)
     def test_valid_login(self):
-        base_url = "https://letskodeit.teachable.com/"
-
-        driver = webdriver.Chrome()
-        driver.maximize_window()
-        driver.implicitly_wait(3)
-        driver.get(base_url)
-
-        login_link = driver.find_element_by_link_text("Login")
-        login_link.click()
-
-        email_field = driver.find_element_by_id("user_email")
-        email_field.send_keys("test@email.com")
-
-        password_field = driver.find_element_by_id("user_password")
-        password_field.send_keys("abcabc")
-
-        login_btn = driver.find_element_by_name("commit")
-        login_btn.click()
-
-        user_icon = driver.find_element_by_xpath(".//*[@id='navbar']//span[text()='Test User']")
-        if user_icon is not None:
-            print("Login successful.")
-        else:
-            print("Login failed")
-
-
-c = LoginTests()
-c.test_valid_login()
+        self.lp.login("test@email.com", "abcabc")
+        result = self.lp.verify_title()
+        self.ts.mark(result, "Verify Title passed")
+        result2 = self.lp.verify_login_success()
+        self.ts.mark_final("test_valid_login", result2, "Valid login passed")
