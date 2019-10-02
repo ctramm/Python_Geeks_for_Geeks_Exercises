@@ -12,8 +12,7 @@ VALID_COLORS = ['blue', 'yellow', 'red']
 
 def print_colors():
     while True:
-        user_input = input("Enter a color or quit")
-        color = user_input.lower()
+        color = input("Enter a color or quit").lower()
         if color == "quit":
             print('bye')
             break
@@ -22,4 +21,3 @@ def print_colors():
             continue
         else:
             print(f"{color}")
-        pass
