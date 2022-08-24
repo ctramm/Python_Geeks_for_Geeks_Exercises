@@ -20,3 +20,21 @@ while num < 10:
 
 print("\nPrint list outside of while loop")
 print(my_list)
+
+
+def american_flag():
+    first_counter = 0
+
+    while first_counter < 5:
+        print("**********---------------")
+        first_counter += 1
+
+    second_counter = 0
+
+    while second_counter < 4:
+        print("-------------------------")
+        second_counter += 1
+
+if __name__ == "__main__":
+
+    american_flag()
