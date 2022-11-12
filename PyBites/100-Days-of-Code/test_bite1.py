@@ -1,4 +1,4 @@
-from summing import sum_numbers
+from Bite1 import sum_numbers
 
 
 def test_sum_numbers_default_args():
